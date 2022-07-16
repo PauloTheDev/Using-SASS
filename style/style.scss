@@ -1,0 +1,67 @@
+/*=========Functions=========*/
+@mixin align($justify){
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin circleForm($color){
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    background-color: $color;
+}
+
+
+@mixin squareForm($color){
+    width: 100px;
+    height: 100px;
+
+    
+    background-color: $color;
+}
+
+
+@mixin retanguleForm($color){
+    width: 150px;
+    height: 100px;
+
+    
+    background-color: $color;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #1a1a1a;
+    color: white;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+    #squares{
+        @include align(space-around)
+    };
+
+    #circles{
+        @include align(space-around)
+    };
+
+    #retangules{
+        @include align(space-around)
+    };
+}
+
+.circle{
+    @include circleForm(red)
+}
+
+.square{
+    @include squareForm(blue)
+}
+
+.retangule{
+    @include retanguleForm(green)
+}
